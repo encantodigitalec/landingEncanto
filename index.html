@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Encanto Digital: invitaciones digitales para celebrar momentos especiales.">
+    <meta name="theme-color" content="#FAFAF8">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:title" content="Encanto Digital | Invitaciones digitales">
+    <meta property="og:description" content="Invitaciones digitales para celebrar momentos especiales.">
+    <meta name="robots" content="index,follow">
+    <title>Encanto Digital | Invitaciones digitales</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/catalogo.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header container">
+      <a class="brand" href="./" aria-label="Encanto Digital, inicio">
+        <img src="assets/logo/logoEncantoDigital.png" alt="Encanto Digital" width="1672" height="941">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>
+        <span class="menu-toggle__label">Menú</span>
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+      </button>
+      <nav id="site-navigation" class="site-navigation" aria-label="Navegación principal">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero container" aria-labelledby="titulo-principal">
+        <div class="hero__copy">
+          <p class="eyebrow">ENCANTO DIGITAL · INVITACIONES DIGITALES</p>
+          <h1 id="titulo-principal">Una invitación que da inicio a algo inolvidable.</h1>
+          <p class="hero__description">Comparte los detalles de tu celebración en una invitación digital pensada para llegar con encanto.</p>
+          <a class="button" href="#catalogo">Explorar catálogo <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero__note" aria-label="Diseños de invitaciones digitales">
+          <span class="hero__note-mark" aria-hidden="true">E</span>
+          <p>Tu historia merece una invitación especial.</p>
+          <span class="hero__note-caption">UN DETALLE PARA RECORDAR</span>
+        </div>
+      </section>
+
+      <section id="catalogo" class="section section--surface" aria-labelledby="titulo-catalogo">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">ENCUENTRA TU ESTILO</p>
+            <h2 id="titulo-catalogo">Invitaciones para celebrar</h2>
+            <p>Explora los modelos disponibles y encuentra el diseño que acompaña tu ocasión.</p>
+          </div>
+          <div id="catalog-filters" class="catalog-filters" aria-label="Filtrar por categoría" hidden></div>
+          <div id="catalog-grid" class="card-grid" aria-live="polite" aria-busy="false"></div>
+          <p id="catalog-empty" class="empty-state" role="status" hidden></p>
+        </div>
+      </section>
+
+      <section id="beneficios" class="section container" aria-labelledby="titulo-beneficios">
+        <div class="section-heading">
+          <p class="eyebrow">HECHAS PARA COMPARTIR</p>
+          <h2 id="titulo-beneficios">Todo lo importante, en un solo lugar</h2>
+          <p>Una experiencia cómoda para tus invitados, con los detalles de tu celebración al alcance de un enlace.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <span class="benefit-card__number" aria-hidden="true">01</span>
+            <h3>Tu estilo</h3>
+            <p>Un diseño personalizable para reflejar la esencia de tu celebración.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__number" aria-hidden="true">02</span>
+            <h3>Detalles a mano</h3>
+            <p>Comparte información del evento, ubicación y otros detalles útiles.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__number" aria-hidden="true">03</span>
+            <h3>Fácil de compartir</h3>
+            <p>Envía la invitación a tus seres queridos desde el celular.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__number" aria-hidden="true">04</span>
+            <h3>Confirmación</h3>
+            <p>Incluye una opción para que tus invitados confirmen su asistencia.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="section section--surface" aria-labelledby="titulo-proceso">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">ASÍ DE FÁCIL</p>
+            <h2 id="titulo-proceso">Tu invitación, en tres pasos</h2>
+          </div>
+          <ol class="steps-list">
+            <li><span class="step-number">1</span><div><h3>Elige un diseño</h3><p>Encuentra el modelo que va con tu celebración.</p></div></li>
+            <li><span class="step-number">2</span><div><h3>Comparte los detalles</h3><p>Cuéntanos la información que llevará tu invitación.</p></div></li>
+            <li><span class="step-number">3</span><div><h3>Recibe y comparte</h3><p>Envía tu invitación digital a tus invitados.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact-section container" aria-labelledby="titulo-contacto">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">HABLEMOS DE TU CELEBRACIÓN</p>
+            <h2 id="titulo-contacto">¿Tienes una ocasión especial en mente?</h2>
+            <p>Pronto podrás escribirnos para encontrar una invitación a tu medida.</p>
+          </div>
+          <button id="contact-button" class="button button--light" type="button" disabled>
+            WhatsApp próximamente
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <a class="footer-brand" href="./">Encanto Digital</a>
+      <p>Invitaciones digitales para momentos especiales.</p>
+      <small>© <span id="current-year"></span> Encanto Digital</small>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+.hero {
+  min-height: auto;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+}
+
+.hero__note {
+  min-height: 17rem;
+}
+
+.benefit-grid,
+.steps-list {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.contact-panel {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@media (max-width: 40rem) {
+  .site-navigation {
+    position: absolute;
+    z-index: 2;
+    top: calc(100% - var(--space-2));
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-2);
+    border: var(--border-subtle);
+    border-radius: var(--radius-control);
+    background: var(--color-background);
+    box-shadow: var(--shadow-card);
+  }
+
+  .site-navigation a {
+    padding: var(--space-3);
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer p,
+  .site-footer small {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --content-gutter: 2rem;
+  }
+
+  .card-grid,
+  .benefit-grid,
+  .steps-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero {
+    min-height: min(42rem, calc(100svh - 5rem));
+    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
+    gap: clamp(var(--space-8), 8vw, var(--space-16));
+  }
+
+  .hero__note {
+    min-height: 22rem;
+  }
+
+  .card-grid,
+  .steps-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .benefit-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .contact-panel {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
