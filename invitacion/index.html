@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Conoce los detalles, opciones y condiciones de esta invitaci&#x00f3;n digital de Encanto Digital.">
+    <meta name="theme-color" content="#FCFBF8">
+    <link rel="icon" type="image/png" href="../assets/logo/logoEncantoDigital.png">
+    <meta name="robots" content="index,follow">
+    <title>Detalles de la invitaci&#x00f3;n | Encanto Digital</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/details.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script src="../js/catalogo.js" defer></script>
+    <script src="details.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header detail-header container">
+      <a class="brand" href="../" aria-label="Encanto Digital, inicio">
+        <img src="../assets/logo/logoEncantoDigital.png" alt="Encanto Digital" width="1672" height="941">
+      </a>
+    </header>
+
+    <main id="contenido" class="detail-page container" aria-busy="true">
+      <p id="detail-status" class="detail-status" role="status">Cargando invitaci&#x00f3;n...</p>
+
+      <section id="detail-error" class="detail-error" aria-labelledby="detail-error-title" hidden>
+        <p class="eyebrow">ENCANTO DIGITAL</p>
+        <h1 id="detail-error-title">No encontramos esta invitaci&#x00f3;n</h1>
+        <p>Puede que el dise&#x00f1;o ya no est&#x00e9; disponible o que el enlace sea incorrecto.</p>
+        <a class="button" href="../#catalogo">Volver al cat&#x00e1;logo</a>
+      </section>
+
+      <article id="invitation-detail" class="invitation-detail" hidden>
+        <a class="detail-back" href="../#catalogo"><span aria-hidden="true">&#8592;</span> Volver al cat&#x00e1;logo</a>
+
+        <section class="detail-hero" aria-labelledby="detail-title">
+          <div id="detail-visual" class="detail-visual"></div>
+          <div class="detail-hero__content">
+            <p id="detail-category" class="eyebrow"></p>
+            <h1 id="detail-title"></h1>
+            <p id="detail-description" class="detail-description"></p>
+            <div id="detail-demo-action" class="detail-demo-action"></div>
+          </div>
+        </section>
+
+        <section id="detail-personalization" class="detail-section" aria-labelledby="personalization-title" hidden>
+          <p class="eyebrow">A TU ESTILO</p>
+          <h2 id="personalization-title">Personal&#x00ed;zala</h2>
+          <ul id="personalization-options" class="detail-chips"></ul>
+        </section>
+
+        <section id="detail-features" class="detail-section" aria-labelledby="features-title" hidden>
+          <p class="eyebrow">FUNCIONES DEL DISE&#x00d1;O</p>
+          <h2 id="features-title">Una invitaci&#x00f3;n interactiva</h2>
+          <ul id="feature-list" class="detail-feature-list"></ul>
+        </section>
+
+        <section class="detail-section detail-information" aria-labelledby="information-title">
+          <p class="eyebrow">INFORMACI&#x00d3;N CLARA</p>
+          <h2 id="information-title">Todo lo que necesitas saber</h2>
+          <div id="detail-accordions" class="detail-accordions"></div>
+        </section>
+
+        <section class="detail-contact" aria-labelledby="detail-contact-title">
+          <div>
+            <p class="eyebrow">TU CELEBRACI&#x00d3;N EMPIEZA AQU&#x00cd;</p>
+            <h2 id="detail-contact-title">&#x00bf;Te gusta este dise&#x00f1;o?</h2>
+            <p>Escr&#x00ed;benos y cu&#x00e9;ntanos qu&#x00e9; necesitas para tu evento.</p>
+          </div>
+          <div id="detail-contact-action"></div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer container detail-footer">
+      <a class="footer-brand" href="../">Encanto Digital</a>
+      <p>Invitaciones digitales para momentos especiales.</p>
+      <small>&copy; <span id="current-year"></span> Encanto Digital</small>
+    </footer>
+  </body>
+</html>

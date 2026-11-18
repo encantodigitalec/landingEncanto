@@ -79,7 +79,7 @@ main,
 .site-header {
   position: relative;
   display: flex;
-  min-height: 5rem;
+  min-height: 4.5rem;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
@@ -87,7 +87,7 @@ main,
 
 .brand {
   display: inline-block;
-  flex: 0 1 10rem;
+  flex: 0 1 9rem;
   color: inherit;
   text-decoration: none;
 }
@@ -158,21 +158,22 @@ main,
 }
 
 .hero {
-  display: grid;
-  min-height: min(42rem, calc(100svh - 5rem));
-  align-items: center;
-  grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
-  gap: clamp(var(--space-8), 8vw, var(--space-16));
-  padding-block: var(--space-16);
+  display: block;
+  min-height: 0;
+  padding-block: var(--space-6) var(--space-4);
 }
 
 .hero__copy {
-  max-width: 42rem;
+  max-width: 48rem;
 }
 
 .hero h1 {
-  max-width: 12ch;
-  margin-bottom: var(--space-6);
+  max-width: 24ch;
+  margin-bottom: var(--space-2);
+}
+
+.hero .eyebrow {
+  margin-bottom: var(--space-2);
 }
 
 .eyebrow {
@@ -185,49 +186,22 @@ main,
 }
 
 .hero__description {
-  max-width: 38rem;
-  margin-bottom: var(--space-8);
-  font-size: var(--font-size-lead);
+  max-width: 44rem;
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: var(--font-size-body);
 }
 
-.hero__note {
-  position: relative;
-  display: grid;
-  min-height: 22rem;
-  align-content: center;
-  justify-items: center;
-  padding: var(--space-8);
-  border: var(--border-subtle);
-  border-radius: 45% 45% var(--radius-card) var(--radius-card);
-  background: var(--color-surface);
-  text-align: center;
+#catalogo {
+  padding-block: var(--space-8);
 }
 
-.hero__note-mark {
-  display: grid;
-  width: 5rem;
-  aspect-ratio: 1;
-  place-items: center;
-  margin-bottom: var(--space-6);
-  border: 1px solid var(--color-detail);
-  border-radius: 50%;
-  color: var(--color-accent);
-  font-family: Georgia, serif;
-  font-size: 3rem;
-  font-style: italic;
+#catalogo .section-heading {
+  margin-bottom: var(--space-4);
 }
 
-.hero__note p {
-  max-width: 14ch;
-  font-family: Georgia, serif;
-  font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2rem);
-  line-height: 1.25;
-}
-
-.hero__note-caption {
-  color: var(--color-accent);
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
+#catalogo .section-heading h2 {
+  margin-bottom: 0;
 }
 
 .section {
@@ -268,6 +242,10 @@ main,
   margin-bottom: var(--space-6);
 }
 
+.catalog-filters:empty {
+  min-height: 2.75rem;
+}
+
 .filter-button {
   min-height: 2.75rem;
   padding: var(--space-2) var(--space-4);
@@ -280,7 +258,8 @@ main,
 }
 
 .filter-button[aria-pressed="true"] {
-  background: var(--color-accent);
+  border-color: var(--color-detail-strong);
+  background: var(--color-detail-strong);
   color: var(--color-background);
 }
 
@@ -305,12 +284,23 @@ main,
   border-top: 1px solid var(--color-detail);
 }
 
-.benefit-card__number {
-  display: block;
-  margin-bottom: var(--space-8);
+.benefit-card__icon {
+  display: grid;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  place-items: center;
+  margin-bottom: var(--space-4);
   color: var(--color-accent);
-  font-size: var(--font-size-small);
-  letter-spacing: 0.12em;
+}
+
+.benefit-card__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
 }
 
 .benefit-card p,
@@ -401,8 +391,9 @@ button:disabled {
 .card__actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-2);
-  margin-top: var(--space-6);
+  margin-top: var(--space-4);
 }
 
 .button--card {
@@ -410,10 +401,17 @@ button:disabled {
   font-size: var(--font-size-small);
 }
 
+.button--unavailable {
+  cursor: not-allowed;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
 .site-footer {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   gap: var(--space-2) var(--space-6);
   padding-block: var(--space-8);
   border-top: var(--border-subtle);
@@ -426,27 +424,57 @@ button:disabled {
 }
 
 .site-footer p {
-  grid-column: 1;
-  grid-row: 2;
   margin: 0;
-  color: var(--color-accent);
+  color: var(--color-muted);
   font-size: var(--font-size-small);
 }
 
 .site-footer small {
-  grid-column: 2;
-  grid-row: 1 / span 2;
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
 }
 
-.reveal-ready main > section:not(.hero) {
-  opacity: 0;
-  transform: translateY(0.75rem);
-  transition: opacity 420ms ease, transform 420ms ease;
+.footer-contact {
+  color: var(--color-accent);
+  font-size: var(--font-size-small);
+  font-weight: 650;
+  text-decoration: none;
 }
 
-.reveal-ready main > section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+.whatsapp-float {
+  position: fixed;
+  z-index: 5;
+  right: var(--space-4);
+  bottom: max(var(--space-4), env(safe-area-inset-bottom));
+  display: grid;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-background);
+  box-shadow: var(--shadow-card-hover);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.whatsapp-float svg {
+  width: 1.65rem;
+  height: 1.65rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-0.15rem);
+  background: var(--color-accent-hover);
+}
+
+.whatsapp-float:focus-visible {
+  box-shadow: var(--focus-ring), var(--shadow-card-hover);
 }
 
 main > section {
@@ -475,12 +503,12 @@ button {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .button:hover,
 button:hover {
-  background: var(--color-accent);
+  background: var(--color-accent-hover);
 }
 
 .button--secondary {
@@ -511,13 +539,67 @@ button:hover {
   border-radius: var(--radius-card);
   background: var(--color-background);
   box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: var(--color-surface);
+}
+
+.card__media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .card__image {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-fast);
+}
+
+.card__image.is-unavailable {
+  display: none;
+}
+
+.card__phone {
+  position: absolute;
+  right: 7%;
+  bottom: 6%;
+  width: 25%;
+  aspect-ratio: 9 / 18.5;
+  padding: 0.42rem 0.3rem;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 72%);
+  border-radius: 1.15rem;
+  background: #171717;
+  box-shadow: 0 0.7rem 1.8rem rgb(20 18 16 / 38%);
+  transform: rotate(5deg);
+}
+
+.card__phone::before {
+  position: absolute;
+  z-index: 1;
+  top: 0.24rem;
+  left: 50%;
+  width: 28%;
+  height: 0.22rem;
+  border-radius: 999px;
+  background: #171717;
+  content: "";
+  transform: translateX(-50%);
+}
+
+.card__phone-screen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.82rem;
   object-fit: cover;
 }
 
@@ -525,11 +607,59 @@ button:hover {
   padding: var(--space-6);
 }
 
-.card__meta {
-  color: var(--color-accent);
-  font-size: var(--font-size-small);
+.card--skeleton {
+  pointer-events: none;
 }
 
-.site-footer {
-  padding-block: var(--space-8);
+.card-skeleton__category,
+.card-skeleton__title,
+.card-skeleton__action {
+  display: block;
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
 }
+
+.card-skeleton__category {
+  width: 4rem;
+  height: 1.4rem;
+  margin-bottom: var(--space-2);
+}
+
+.card-skeleton__title {
+  width: min(75%, 13rem);
+  height: 1.45rem;
+}
+
+.card-skeleton__action {
+  width: 5.5rem;
+  height: 2.75rem;
+}
+
+.card-skeleton__action:last-child {
+  width: 5rem;
+}
+
+.card__meta {
+  margin-bottom: var(--space-2);
+  color: var(--color-accent);
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.invitation-card h3 {
+  margin-bottom: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .card:hover .card__image:not(.is-unavailable) {
+    transform: scale(1.025);
+  }
+}
+

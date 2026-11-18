@@ -1,0 +1,40 @@
+{
+  "invitations": [
+    {
+      "id": "boda-001",
+      "name": "Invitaci\u00f3n de boda",
+      "category": "bodas",
+      "description": "Dise\u00f1o rom\u00e1ntico de inspiraci\u00f3n bot\u00e1nica para compartir los detalles de tu celebraci\u00f3n.",
+      "published": true,
+      "order": 1,
+      "images": {
+        "desktop": "assets/invitaciones/boda-pareja.webp",
+        "phone": "assets/invitaciones/portada-boda-demo.svg"
+      },
+      "demoUrl": "https://encantodigitalec.github.io/mvpBoda/",
+      "personalization": {
+        "texts": true
+      },
+      "features": {
+        "music": true,
+        "map": true,
+        "agenda": true,
+        "rsvp": true,
+        "countdown": true,
+        "gallery": true,
+        "calendar": true
+      },
+      "included": [
+        "Invitaci\u00f3n digital con enlace para compartir.",
+        "Las secciones y funciones indicadas para este dise\u00f1o."
+      ],
+      "requirements": [
+        "Nombres de la pareja",
+        "Fecha y horarios del evento",
+        "Ubicaciones y direcciones",
+        "Textos para la invitaci\u00f3n",
+        "Datos para la confirmaci\u00f3n de asistencia"
+      ]
+    }
+  ]
+}

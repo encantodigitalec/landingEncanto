@@ -4,11 +4,11 @@ Landing estática para presentar invitaciones digitales. Usa HTML, CSS y JavaScr
 
 ## Ejecución local
 
-Desde la carpeta del proyecto, inicia un servidor estático con `python -m http.server 8000` y abre `http://localhost:8000`. También se puede abrir `index.html` directamente, aunque un servidor local reproduce mejor el despliegue estático.
+Desde la carpeta del proyecto, ejecuta `node scripts/serve.mjs` y abre `http://127.0.0.1:8000`. El catálogo se carga desde archivos JSON; por la seguridad del navegador no se puede abrir la landing con `file://` y esperar que aparezcan los modelos.
 
 ## Datos del catálogo y contacto
 
-Los modelos se agregan en `window.ENCANTO_DIGITAL.invitaciones`, dentro de `js/catalogo.js`. Cada registro requiere identificador, nombre, categoría, estilo, ruta de portada local, URL HTTPS de demo y `activo: true`. La primera demo confirmada es una invitación de boda; su tarjeta usa una portada genérica de la landing. Las demás portadas deben guardarse en `assets/invitaciones/`.
+Los modelos se agregan en `data/invitations.json`. Cada registro publicado incluye identificador, nombre, categoría, orden, imágenes responsive opcionales, URL HTTPS de demo, opciones de personalización y funciones disponibles. `invitacion/?id=<id>` usa una plantilla común para mostrar la ficha. Las condiciones aprobadas se editan en `data/service-policies.json`; el número de WhatsApp se configura en `js/catalogo.js`.
 
 El número comercial aprobado está configurado en `whatsappNumero` con formato internacional de Ecuador. Los mensajes se generan con el nombre del modelo y el texto se codifica para el enlace `wa.me`.
 

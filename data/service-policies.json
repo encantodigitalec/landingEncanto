@@ -1,0 +1,21 @@
+{
+  "corrections": {
+    "title": "Correcciones",
+    "summary": "Incluye 1 ronda de correcciones antes de aprobar la invitaci\u00f3n.",
+    "detail": "Puedes reunir varios ajustes y enviarlos juntos. Cambiar la plantilla, redise\u00f1ar, agregar funciones o hacer cambios estructurales puede cotizarse por separado."
+  },
+  "payment": {
+    "title": "Forma de pago",
+    "summary": "50 % para iniciar y 50 % antes de la entrega o publicaci\u00f3n definitiva.",
+    "detail": "El enlace definitivo se entrega una vez completado el pago acordado."
+  },
+  "availability": {
+    "title": "Disponibilidad",
+    "summary": "La invitaci\u00f3n se ofrece por 6 meses desde su publicaci\u00f3n."
+  },
+  "postDelivery": {
+    "title": "Ajustes despu\u00e9s de la entrega",
+    "summary": "Incluye ajustes menores sin costo durante los 7 d\u00edas posteriores a la entrega.",
+    "detail": "Aplican a informaci\u00f3n existente. Nuevas secciones o funciones, cambios de plantilla y redise\u00f1os no est\u00e1n incluidos."
+  }
+}

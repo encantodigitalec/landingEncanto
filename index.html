@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Encanto Digital: invitaciones digitales para celebrar momentos especiales.">
-    <meta name="theme-color" content="#FAFAF8">
+    <meta name="theme-color" content="#FCFBF8">
+    <link rel="icon" type="image/png" href="assets/logo/logoEncantoDigital.png">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_EC">
     <meta property="og:title" content="Encanto Digital | Invitaciones digitales">
@@ -29,7 +30,6 @@
       </button>
       <nav id="site-navigation" class="site-navigation" aria-label="Navegación principal">
         <a href="#catalogo">Catálogo</a>
-        <a href="#beneficios">Beneficios</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -38,15 +38,9 @@
     <main id="contenido">
       <section class="hero container" aria-labelledby="titulo-principal">
         <div class="hero__copy">
-          <p class="eyebrow">ENCANTO DIGITAL · INVITACIONES DIGITALES</p>
-          <h1 id="titulo-principal">Una invitación que da inicio a algo inolvidable.</h1>
-          <p class="hero__description">Comparte los detalles de tu celebración en una invitación digital pensada para llegar con encanto.</p>
-          <a class="button" href="#catalogo">Explorar catálogo <span aria-hidden="true">↓</span></a>
-        </div>
-        <div class="hero__note" aria-label="Diseños de invitaciones digitales">
-          <span class="hero__note-mark" aria-hidden="true">E</span>
-          <p>Tu historia merece una invitación especial.</p>
-          <span class="hero__note-caption">UN DETALLE PARA RECORDAR</span>
+          <p class="eyebrow">ENCANTO DIGITAL</p>
+          <h1 id="titulo-principal">Invitaciones digitales para momentos especiales.</h1>
+          <p class="hero__description">Explora nuestros dise&#241;os y encuentra el ideal para tu celebraci&#243;n.</p>
         </div>
       </section>
 
@@ -55,40 +49,51 @@
           <div class="section-heading">
             <p class="eyebrow">ENCUENTRA TU ESTILO</p>
             <h2 id="titulo-catalogo">Invitaciones para celebrar</h2>
-            <p>Explora los modelos disponibles y encuentra el diseño que acompaña tu ocasión.</p>
           </div>
-          <div id="catalog-filters" class="catalog-filters" aria-label="Filtrar por categoría" hidden></div>
-          <div id="catalog-grid" class="card-grid" aria-live="polite" aria-busy="false"></div>
+          <div id="catalog-filters" class="catalog-filters" aria-label="Filtrar por categoría"></div>
+          <div id="catalog-grid" class="card-grid" aria-live="polite" aria-busy="true">
+            <article class="card card--skeleton" aria-hidden="true">
+              <div class="card__media"></div>
+              <div class="card__content">
+                <span class="card-skeleton__category"></span>
+                <span class="card-skeleton__title"></span>
+                <div class="card__actions">
+                  <span class="card-skeleton__action"></span>
+                  <span class="card-skeleton__action"></span>
+                </div>
+              </div>
+            </article>
+          </div>
           <p id="catalog-empty" class="empty-state" role="status" hidden></p>
         </div>
       </section>
 
       <section id="beneficios" class="section container" aria-labelledby="titulo-beneficios">
         <div class="section-heading">
-          <p class="eyebrow">HECHAS PARA COMPARTIR</p>
-          <h2 id="titulo-beneficios">Todo lo importante, en un solo lugar</h2>
-          <p>Una experiencia cómoda para tus invitados, con los detalles de tu celebración al alcance de un enlace.</p>
+          <p class="eyebrow">QU&Eacute; INCLUYE TU INVITACI&Oacute;N</p>
+          <h2 id="titulo-beneficios">Lo esencial para celebrar</h2>
         </div>
         <div class="benefit-grid">
           <article class="benefit-card">
-            <span class="benefit-card__number" aria-hidden="true">01</span>
-            <h3>Tu estilo</h3>
-            <p>Un diseño personalizable para reflejar la esencia de tu celebración.</p>
+            <span class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3 14.4 8l5.5.8-4 3.9.9 5.5-4.8-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 3Z"/></svg>
+            </span>
+            <h3>Personalizable</h3>
+            <p>Opciones de texto seg&uacute;n cada dise&ntilde;o.</p>
           </article>
           <article class="benefit-card">
-            <span class="benefit-card__number" aria-hidden="true">02</span>
-            <h3>Detalles a mano</h3>
-            <p>Comparte información del evento, ubicación y otros detalles útiles.</p>
+            <span class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 18.5v-13Z"/><path d="m10 8 5 4-5 4V8Z"/></svg>
+            </span>
+            <h3>Interactiva</h3>
+            <p>Funciones disponibles en la invitaci&oacute;n que elijas.</p>
           </article>
           <article class="benefit-card">
-            <span class="benefit-card__number" aria-hidden="true">03</span>
-            <h3>Fácil de compartir</h3>
-            <p>Envía la invitación a tus seres queridos desde el celular.</p>
-          </article>
-          <article class="benefit-card">
-            <span class="benefit-card__number" aria-hidden="true">04</span>
-            <h3>Confirmación</h3>
-            <p>Incluye una opción para que tus invitados confirmen su asistencia.</p>
+            <span class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M8.5 15.5 6.8 17.2a4 4 0 0 1-5.6-5.6l4-4a4 4 0 0 1 5.6 0"/><path d="m15.5 8.5 1.7-1.7a4 4 0 0 1 5.6 5.6l-4 4a4 4 0 0 1-5.6 0"/><path d="m8 16 8-8"/></svg>
+            </span>
+            <h3>Lista para compartir</h3>
+            <p>Recibe un enlace para enviar a tus invitados.</p>
           </article>
         </div>
       </section>
@@ -96,13 +101,13 @@
       <section id="como-funciona" class="section section--surface" aria-labelledby="titulo-proceso">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">ASÍ DE FÁCIL</p>
-            <h2 id="titulo-proceso">Tu invitación, en tres pasos</h2>
+            <p class="eyebrow">EN TRES PASOS</p>
+            <h2 id="titulo-proceso">As&#x00ed; funciona</h2>
           </div>
           <ol class="steps-list">
-            <li><span class="step-number">1</span><div><h3>Elige un diseño</h3><p>Encuentra el modelo que va con tu celebración.</p></div></li>
-            <li><span class="step-number">2</span><div><h3>Comparte los detalles</h3><p>Cuéntanos la información que llevará tu invitación.</p></div></li>
-            <li><span class="step-number">3</span><div><h3>Recibe y comparte</h3><p>Envía tu invitación digital a tus invitados.</p></div></li>
+            <li><span class="step-number">01</span><div><h3>Elige</h3><p>Encuentra el dise&ntilde;o para tu celebraci&oacute;n.</p></div></li>
+            <li><span class="step-number">02</span><div><h3>Personaliza</h3><p>Env&iacute;anos los datos que llevar&aacute; tu invitaci&oacute;n.</p></div></li>
+            <li><span class="step-number">03</span><div><h3>Comparte</h3><p>Recibe tu enlace y comp&aacute;rtelo con tus invitados.</p></div></li>
           </ol>
         </div>
       </section>
@@ -110,20 +115,25 @@
       <section id="contacto" class="contact-section container" aria-labelledby="titulo-contacto">
         <div class="contact-panel">
           <div>
-            <p class="eyebrow">HABLEMOS DE TU CELEBRACIÓN</p>
-            <h2 id="titulo-contacto">¿Tienes una ocasión especial en mente?</h2>
-            <p>Pronto podrás escribirnos para encontrar una invitación a tu medida.</p>
+            <p class="eyebrow">CU&Eacute;NTANOS SOBRE TU CELEBRACI&Oacute;N</p>
+            <h2 id="titulo-contacto">&iquest;Te ayudamos a elegir?</h2>
+            <p>Comparte tu idea por WhatsApp y te orientamos.</p>
           </div>
           <button id="contact-button" class="button button--light" type="button" disabled>
-            WhatsApp próximamente
+            Consultar por WhatsApp
           </button>
         </div>
       </section>
     </main>
 
+    <a id="whatsapp-float" class="whatsapp-float" href="#" target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp" hidden>
+      <svg viewBox="0 0 32 32" focusable="false" aria-hidden="true"><path d="M16 4a11.5 11.5 0 0 0-9.9 17.4L4.5 27l5.8-1.5A11.5 11.5 0 1 0 16 4Z"/><path d="M11.2 9.8c-.3-.5-.6-.5-.9-.5h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.8c.2.3 2.5 4.1 6.2 5.6 3.1 1.2 3.7 1 4.4.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5l-2.4-1.2c-.3-.1-.6-.2-.8.2-.2.3-.9 1.2-1.1 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7l-1-2.4Z"/></svg>
+    </a>
+
     <footer class="site-footer container">
       <a class="footer-brand" href="./">Encanto Digital</a>
       <p>Invitaciones digitales para momentos especiales.</p>
+      <a class="footer-contact" href="#contacto">Contacto</a>
       <small>© <span id="current-year"></span> Encanto Digital</small>
     </footer>
   </body>
